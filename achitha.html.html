@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px 50px;
+            width: 350px;
+            text-align: center;
+        }
+        
+        .container img {
+            width: 175px;
+            margin-bottom: 30px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        .divider {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #dbdbdb;
+        }
+        
+        .divider span {
+            margin: 0 10px;
+            color: #8e8e8e;
+            font-size: 13px;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #00376b;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.querySelector("button").addEventListener("click", function() {
+            const username = document.querySelectorAll("input")[0].value;
+            const password = document.querySelectorAll("input")[1].value;
+
+            // Print to console (you can replace this with redirect or alert)
+            console.log("Username:", username);
+            console.log("Password:", password);
+
+            // Redirect to another page
+            // window.location.href = "welcome.html"; // Create this page
+            alert("Logged in as: " + username);
+        });
+    </script>
+
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logo" />
+        <input type="text" placeholder="Phone number, username, or email" />
+        <input type="password" placeholder="Password" />
+        <button>Log In</button>
+
+        <div class="divider"><span>OR</span></div>
+
+        <div><a href="#">Log in with Facebook</a></div>
+        <div class="footer"><a href="#">Forgot password?</a></div>
+    </div>
+</body>
+
+</html>
